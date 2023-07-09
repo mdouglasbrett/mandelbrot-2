@@ -8,5 +8,6 @@ use num::Complex;
 /// seems to be a member (more precisely, if we reached the iteration limit without
 /// being able to prove 'c' is a not a member), return None.
 pub fn escape_time(c: Complex<f64>, limit: usize) -> Option<usize> {
+    let mut z = Complex { re: 0., im: 0., };
     None
 }
