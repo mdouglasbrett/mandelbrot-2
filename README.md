@@ -6,7 +6,12 @@
 | ----- | ------ | ----- |
 | 3.57s | 0.01s  | 3.59s |
 
+## Pass 2 (concurrent):
+
+| user  | system | real  |
+| ----- | ------ | ----- |
+| 4.10s | 0.01s  | 1.37s |
+
 ## TODO:
 
-- [ ] Pass 2 (concurrent)
 - [ ] Move from greyscale to color
