@@ -20,8 +20,6 @@ fn main() {
     let lower_right = parse_complex(&args[4]).expect("error parsing lower right corner point");
 
     let mut pixels = vec![0; bounds.0 * bounds.1];
-    println!("Rendering pixels");
     render(&mut pixels, bounds, upper_left, lower_right);
-    println!("Writing pixels to file");
     write_image(&args[1], &pixels, bounds).expect("err writing PNG file");
 }

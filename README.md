@@ -2,9 +2,9 @@
 
 ## Pass 1 (single threaded):
 
-| user  | system | cpu | total |
-| ----- | ------ | --- | ----- |
-| 3.58s | 0.02s  | 86% | 4.173 |
+| user  | system | real  |
+| ----- | ------ | ----- |
+| 3.57s | 0.01s  | 3.59s |
 
 ## TODO:
 
