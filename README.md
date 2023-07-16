@@ -1,4 +1,4 @@
-# Mandelbot Image Generator
+# Mandelbot Set Plotter
 
 ## Pass 1 (single threaded):
 
