@@ -8,5 +8,5 @@
 
 ## TODO:
 
-Pass 2 (concurrent) [ ]
-Move from greyscale to color [ ]
+- [ ] Pass 2 (concurrent)
+- [ ] Move from greyscale to color
