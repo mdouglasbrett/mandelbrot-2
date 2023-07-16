@@ -32,7 +32,7 @@ pub fn escape_time(c: Complex64, limit: usize) -> Option<usize> {
 ///
 /// If `s` has the proper form, return `Some<(x, y)>`. If it doesn't parse
 /// correctly, return `None`.
-fn parse_pair<T: FromStr>(s: &str, separator: char) -> Option<(T, T)> {
+pub fn parse_pair<T: FromStr>(s: &str, separator: char) -> Option<(T, T)> {
     // This is sort of gorgeous...
     match s.find(separator) {
         None => None,
@@ -56,7 +56,7 @@ fn test_parse_pair() {
 
 /// Parse a pair of floating-point numbers separated by a comma as a complex
 /// number.
-fn parse_complex(s: &str) -> Option<Complex64> {
+pub fn parse_complex(s: &str) -> Option<Complex64> {
     match parse_pair(s, ',') {
         Some((re, im)) => Some(Complex64 { re, im }),
         _ => None,
@@ -121,7 +121,7 @@ fn test_pixel_to_point() {
 /// which holds one greyscale pixel per byte (TODO: greyscale for now...). The
 /// `upper_left` and `lower_right` arguments specify the points on the complex
 /// plane corresponding to the upper-left and lower-right corners of the pixel buffer.
-fn render(
+pub fn render(
     pixels: &mut [u8],
     bounds: (usize, usize),
     upper_left: Complex64,
@@ -142,7 +142,7 @@ fn render(
 
 /// Write the buffer `pixels`, whose dimensions are given by `bounds`, to the
 /// file named `filename`
-fn write_image(filename: &str, pixels: &[u8], bounds: (usize, usize)) -> Result<(), Error> {
+pub fn write_image(filename: &str, pixels: &[u8], bounds: (usize, usize)) -> Result<(), Error> {
     let output = File::create(filename)?;
 
     let encoder = PNGEncoder::new(output);
