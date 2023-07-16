@@ -14,4 +14,4 @@
 
 ## TODO:
 
-- [ ] Move from greyscale to color
+- [ ] Move from greyscale to colour
